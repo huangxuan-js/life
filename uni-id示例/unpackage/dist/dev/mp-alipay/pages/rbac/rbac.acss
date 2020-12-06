@@ -1,0 +1,38 @@
+
+.role-permission {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	height: 400px;
+	margin-bottom: 15px;
+}
+.role-scroll,
+.permission-scroll {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.role-item,
+.permission-item {
+	padding: 5px;
+}
+.role-item text,
+.permission-item text {
+	display: block;
+	font-size: 14px;
+}
+.role-scroll .role-item {
+	position: relative;
+}
+.role-scroll .role-item.act::after {
+	position: absolute;
+	content: "→";
+	color: #007AFF;
+	font-size: 20px;
+	height: 20px;
+	line-height: 20px;
+	right: 5px;
+	top: 50%;
+	margin-top: -10px;
+}
+
