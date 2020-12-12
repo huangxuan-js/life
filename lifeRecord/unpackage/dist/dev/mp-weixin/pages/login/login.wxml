@@ -1,1 +1,1 @@
-<view class="content"><button type="default" data-event-opts="{{[['tap',[['loginByWeixin',['$event']]]]]}}" bindtap="__e">微信登录</button><button type="default" data-event-opts="{{[['tap',[['loginByAlipay',['$event']]]]]}}" bindtap="__e">支付宝登录</button></view>
+<view class="content"><button type="default" data-event-opts="{{[['tap',[['loginByWeixin',['$event']]]]]}}" bindtap="__e">微信登录</button></view>
