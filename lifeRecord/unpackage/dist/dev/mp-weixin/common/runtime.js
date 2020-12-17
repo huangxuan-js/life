@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"uview-ui/components/u-avatar/u-avatar":1,"uview-ui/components/u-cell-group/u-cell-group":1,"uview-ui/components/u-cell-item/u-cell-item":1,"uview-ui/components/u-icon/u-icon":1,"uview-ui/components/u-navbar/u-navbar":1};
+/******/ 		var cssChunks = {"uview-ui/components/u-avatar/u-avatar":1,"uview-ui/components/u-cell-group/u-cell-group":1,"uview-ui/components/u-cell-item/u-cell-item":1,"uview-ui/components/u-icon/u-icon":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"uview-ui/components/u-avatar/u-avatar":"uview-ui/components/u-avatar/u-avatar","uview-ui/components/u-cell-group/u-cell-group":"uview-ui/components/u-cell-group/u-cell-group","uview-ui/components/u-cell-item/u-cell-item":"uview-ui/components/u-cell-item/u-cell-item","uview-ui/components/u-icon/u-icon":"uview-ui/components/u-icon/u-icon","uview-ui/components/u-navbar/u-navbar":"uview-ui/components/u-navbar/u-navbar"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"uview-ui/components/u-avatar/u-avatar":"uview-ui/components/u-avatar/u-avatar","uview-ui/components/u-cell-group/u-cell-group":"uview-ui/components/u-cell-group/u-cell-group","uview-ui/components/u-cell-item/u-cell-item":"uview-ui/components/u-cell-item/u-cell-item","uview-ui/components/u-icon/u-icon":"uview-ui/components/u-icon/u-icon"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
