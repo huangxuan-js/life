@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/my/my",
-    "pages/login/login",
     "pages/home/home",
+    "pages/my/my",
+    "pages/setting/setting",
+    "pages/login/login",
     "pages/journal/journal",
-    "pages/bookkeeping/bookkeeping"
+    "pages/bookkeeping/bookkeeping",
+    "pages/my/modifyData/modifyData"
   ],
   "subPackages": [],
   "window": {
@@ -46,5 +48,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap15.json"
+  "sitemapLocation": "sitemap31.json"
 }
