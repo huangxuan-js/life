@@ -47,6 +47,41 @@
 					</u-checkbox-group>
 				</view>
 			</view>
+			
+		</view>
+		<view class="u-fixed u-flex" style="left: 0;top: 0;height: 100rpx;background-color: #ffffff;width: 100%;">
+			<view class="u-flex-1 u-p-l-40">
+				全选
+			</view>
+			<view class="u-flex-1 u-text-center u-font-18" style="color:#000000">
+				书架
+			</view>
+			<view class="u-flex-1 u-text-right u-p-r-40">
+				完成
+			</view>
+		</view>
+		<view class="book-select">
+			<view class="u-flex u-row-between u-p-t-30 u-p-b-20 u-p-l-40 u-p-r-40" style="box-shadow: 0 -2px 4px -1px hsla(0,6%,58%,.6);border-radius: 6rpx;">
+				<view class="">
+					<view class="u-bolder">
+						长夜余火
+					</view>
+					<view class="u-font-12 u-m-t-10"style="color: #2979ff;">
+						查看详情>
+					</view>
+				</view>
+				<view class="">
+					<u-icon name="share" size="50"></u-icon>
+				</view>
+			</view>
+			<view class="u-flex u-row-between u-text-center u-border-top" style="height: 100rpx; ">
+				<view class="u-flex-1" >
+					置顶
+				</view>
+				<view class="u-flex-1" style="color: #fa3534;">
+					删除(1)
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -67,7 +102,7 @@
 			}
 		},
 		onLoad() {
-
+			uni.hideTabBar({})
 		},
 		methods: {
 
@@ -112,5 +147,12 @@
 
 	.book-describe {
 		color: $u-type-info;
+	}
+	.book-select{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #ffffff;
 	}
 </style>

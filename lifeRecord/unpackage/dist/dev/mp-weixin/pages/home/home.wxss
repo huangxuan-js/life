@@ -64,4 +64,11 @@
 .book-describe.data-v-92bb8f34 {
   color: #909399;
 }
+.book-select.data-v-92bb8f34 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
 

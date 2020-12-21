@@ -33,6 +33,9 @@
 .u-abso {
   position: absolute;
 }
+.u-fixed {
+  position: fixed;
+}
 image {
   display: inline-block;
 }
@@ -136,6 +139,12 @@ text {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
+}
+.u-bolder {
+  font-weight: bolder;
+}
+.u-bold {
+  font-weight: bold;
 }
 .u-flex-0 {
   -webkit-box-flex: 0;

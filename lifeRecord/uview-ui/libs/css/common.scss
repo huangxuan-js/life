@@ -7,6 +7,10 @@
 .u-abso {
 	position: absolute;
 }
+.u-fixed{
+	position: fixed;
+}
+
 
 // nvue不能用标签命名样式，不能放在微信组件中，否则微信开发工具会报警告，无法使用标签名当做选择器
 /* #ifndef APP-NVUE */
@@ -106,6 +110,13 @@ text {
 	display: flex;
 	/* #endif */
 	flex-direction: column;
+}
+
+.u-bolder{
+	font-weight: bolder;
+}
+.u-bold{
+	font-weight: bold;
 }
 
 // 定义flex等分
