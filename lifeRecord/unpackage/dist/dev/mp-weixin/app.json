@@ -23,30 +23,29 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "iconPath": "static/images/icon_home.png",
-        "selectedIconPath": "static/images/icon_home_active.png",
+        "iconPath": "static/tabBar/icon_home.png",
+        "selectedIconPath": "static/tabBar/icon_home_active.png",
         "text": "书架"
       },
       {
         "pagePath": "pages/bookkeeping/bookkeeping",
-        "iconPath": "static/images/icon_selected.png",
-        "selectedIconPath": "static/images/icon_selected_active.png",
+        "iconPath": "static/tabBar/icon_selected.png",
+        "selectedIconPath": "static/tabBar/icon_selected_active.png",
         "text": "精选"
       },
       {
         "pagePath": "pages/journal/journal",
-        "iconPath": "static/images/icon_stackRoom.png",
-        "selectedIconPath": "static/images/icon_stackRoom_active.png",
+        "iconPath": "static/tabBar/icon_stackRoom.png",
+        "selectedIconPath": "static/tabBar/icon_stackRoom_active.png",
         "text": "书库"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "static/images/icon_my.png",
-        "selectedIconPath": "static/images/icon_my_active.png",
+        "iconPath": "static/tabBar/icon_my.png",
+        "selectedIconPath": "static/tabBar/icon_my_active.png",
         "text": "个人中心"
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap78.json"
+  "usingComponents": {}
 }

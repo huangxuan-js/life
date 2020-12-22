@@ -119,6 +119,11 @@ text {
 	font-weight: bold;
 }
 
+ .status_bar {
+      height: var(--status-bar-height);
+      width: 100%;
+  }
+
 // 定义flex等分
 @for $i from 0 through 12 {
 	.u-flex-#{$i} {

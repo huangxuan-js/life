@@ -65,23 +65,23 @@
 	    "backgroundColor": "#ffffff", //tabBar 背景色
 	    "list": [{
 	        "pagePath": "pages/home/home", //页面路径 
-	        "iconPath": "static/images/icon_home.png", //未选中图片
-	        "selectedIconPath": "static/images/icon_home_active.png", //选中图片
+	        "iconPath": "static/tabBar/icon_home.png", //未选中图片
+	        "selectedIconPath": "static/tabBar/icon_home_active.png", //选中图片
 	        "text": "书架" //文字标题
 	    }, {
 	        "pagePath": "pages/bookkeeping/bookkeeping",
-	        "iconPath": "static/images/icon_selected.png",
-	        "selectedIconPath": "static/images/icon_selected_active.png",
+	        "iconPath": "static/tabBar/icon_selected.png",
+	        "selectedIconPath": "static/tabBar/icon_selected_active.png",
 	        "text": "精选"
 	    }, {
 	        "pagePath": "pages/journal/journal",
-	        "iconPath": "static/images/icon_stackRoom.png",
-	        "selectedIconPath": "static/images/icon_stackRoom_active.png",
+	        "iconPath": "static/tabBar/icon_stackRoom.png",
+	        "selectedIconPath": "static/tabBar/icon_stackRoom_active.png",
 	        "text": "书库"
 	    }, {
 	        "pagePath": "pages/my/my",
-	        "iconPath": "static/images/icon_my.png",
-	        "selectedIconPath": "static/images/icon_my_active.png",
+	        "iconPath": "static/tabBar/icon_my.png",
+	        "selectedIconPath": "static/tabBar/icon_my_active.png",
 	        "text": "个人中心"
 	    }]
 	},

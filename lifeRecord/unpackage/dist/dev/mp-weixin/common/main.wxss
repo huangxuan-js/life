@@ -146,6 +146,10 @@ text {
 .u-bold {
   font-weight: bold;
 }
+.status_bar {
+  height: 25px;
+  width: 100%;
+}
 .u-flex-0 {
   -webkit-box-flex: 0;
   -webkit-flex: 0;
