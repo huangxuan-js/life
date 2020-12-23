@@ -42,7 +42,7 @@
 			</view>
 		</view>
 		<view class="u-m-t-20 u-p-l-30 u-p-r-30 ">
-			<view class="book-item u-relative u-flex u-m-b-30" v-for="(item,index) in bookList" :key="index" @longtap="longtap(index)">
+			<view class="book-item u-relative u-flex u-m-b-30" v-for="(item,index) in bookList" :key="index"  @longtap="longtap(index)">
 				<u-image width="110rpx" height="146rpx" :src="item.avatar" class="u-m-r-20" style="border-radius: 8rpx;overflow: hidden;"></u-image>
 				<view class="">
 					<view class="u-m-b-20">
@@ -55,7 +55,7 @@
 				<button class="u-reset-button u-font-12 icon-update" v-show="false">更新</button>
 				<view class="u-flex-1 u-flex u-row-right">
 					<u-checkbox-group>
-						<u-checkbox v-model="item.check" v-show="checked" shape="circle" @change="checkChange(index)"></u-checkbox>
+						<u-checkbox v-model="item.check" v-show="checked" shape="circle" @change="checkChange(index,false)" @click.stop=""></u-checkbox>
 					</u-checkbox-group>
 				</view>
 			</view>
@@ -67,7 +67,14 @@
 					更多精彩小说
 				</view>
 			</view>
-
+			<view class="" v-show="checked" v-if >
+				<view class="" style="width:100%;height:230rpx" v-show="bookDescribeShow">
+					
+				</view>
+				<view class=""  style="width:100%,;height:100rpx" v-show="!bookDescribeShow">
+					
+				</view>
+			</view>
 		</view>
 		<view class="u-fixed " style="left: 0;top: 0;background-color: #ffffff;width: 100%;" v-show="checked">
 			<view class="status_bar">
@@ -86,7 +93,7 @@
 			</view>
 		</view>
 		<view class="book-select" v-show="checked">
-			<view class="u-flex u-row-between u-p-t-30 u-p-b-20 u-p-l-40 u-p-r-40" style="box-shadow: 0 -2px 4px -1px hsla(0,6%,58%,.6);border-radius: 6rpx;">
+			<view v-show="bookDescribeShow" class="u-flex u-row-between u-p-t-30 u-p-b-20 u-p-l-40 u-p-r-40 book-select-shadow" style="border-radius: 6rpx;">
 				<view class="">
 					<view class="u-bolder">
 						{{bookDescribe.name}}
@@ -99,11 +106,11 @@
 					<u-icon name="share" size="50"></u-icon>
 				</view>
 			</view>
-			<view class="u-flex u-row-between u-text-center u-border-top" style="height: 100rpx; ">
-				<view class="u-flex-1">
+			<view class="u-flex u-row-between u-text-center u-border-top" :class="{ 'book-select-shadow' : !bookDescribeShow }" style="height: 100rpx; ">
+				<view class="u-flex-1" :class="{ 'unchecked' : unchecked}">
 					置顶
 				</view>
-				<view class="u-flex-1" style="color: #fa3534;" @click="bookDelet">
+				<view class="u-flex-1 red" :class="{ 'unchecked' : unchecked}"  @click="bookDelet">
 					删除<text v-show="num > 0">({{num}})</text>
 				</view>
 			</view>
@@ -160,9 +167,11 @@
 					
 				],
 				bookDescribe: {},
+				bookDescribeShow:true,
 				title: "全选",
 				checked: false,
 				iconBook: require('../../static/icons/book.png'),
+				unchecked:true,
 			}
 		},
 		computed: {
@@ -173,6 +182,22 @@
 					num+=1
 				}
 			})
+			if(num == 1){
+				this.bookDescribeShow = true
+				this.bookList.forEach((v) => {
+					if(v.check){
+						this.bookDescribe = v
+					}
+				})
+			}else{
+				this.bookDescribeShow = false
+			}
+			
+			if(num == 0){
+				this.unchecked = true	
+			}else{
+				this.unchecked = false
+			}
 			return num
 		  }  
 		},
@@ -184,7 +209,6 @@
 					this.bookList[i].check = true
 					this.checked = true
 					uni.hideTabBar({})
-					this.bookDescribe = this.$u.deepClone(this.bookList[i])
 				}
 			},
 			// 全选 取消全选
@@ -202,7 +226,10 @@
 				}
 			},
 			// book选中状态
-			checkChange(e) {
+			checkChange(e,type) {
+				if(!this.checked){
+					return;
+				}
 				this.title = '取消全选'
 				this.bookList.forEach((v, i) => {
 					if (e == i) {
@@ -213,6 +240,7 @@
 						this.title = '全选'
 					}
 				})
+				
 			},
 			// 完成
 			complete() {
@@ -228,6 +256,10 @@
 					if (this.bookList[i].check) {
 						this.bookList.splice(i, 1);
 					}
+				}
+				if(this.bookList.length == 0){
+					this.checked = false
+					uni.showTabBar({})
 				}
 			}
 		}
@@ -292,4 +324,15 @@
 		width: 100%;
 		background-color: #ffffff;
 	}
+	.book-select-shadow{
+		box-shadow: 0 -2px 4px -1px hsla(0,6%,58%,.6);
+	}
+	.red{
+			color: rgb(250, 53, 52);
+		}
+		
+	.unchecked{
+		color: #d6d6d6;
+	}
+	
 </style>
