@@ -1,89 +1,98 @@
 {
 	"easycom": {
-			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
-		},
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/details/details",
+			"style": {
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
 		{
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "",
-				"app-plus":{
-					"titleNView":false
+				"app-plus": {
+					"titleNView": false
 				}
 			}
-		}
-		,
-		{
-		    "path" : "pages/my/my",
-		    "style" : {}
 		},
 		{
-		    "path" : "pages/setting/setting",
-		    "style" : {}
+			"path": "pages/my/my",
+			"style": {}
 		},
 		{
-		    "path" : "pages/login/login",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "登入",
-		        "enablePullDownRefresh": false
-		    }
+			"path": "pages/setting/setting",
+			"style": {}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登入",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/journal/journal",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/bookkeeping/bookkeeping",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/my/modifyData/modifyData",
+			"style": {
+				"navigationBarTitleText": "修改个人资料",
+				"enablePullDownRefresh": false
+			}
+
 		}
-		,{
-            "path" : "pages/journal/journal",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
+
+
+	    ,{
+            "path" : "pages/read/read",
+            "style" : {}
         }
         ,{
-            "path" : "pages/bookkeeping/bookkeeping",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        },
-		{
-		    "path" : "pages/my/modifyData/modifyData", 
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "修改个人资料",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
-        
+            "path" : "pages/read/catalog/catalog",
+            "style" : {}
+        }
     ],
 	"tabBar": {
-	    "color": "#707070", //文字默认颜色
-	    "selectedColor": "#3286fd", //选择文字颜色
-	    "borderStyle": "black", //tabBar 边框颜色 可选black/white
-	    "backgroundColor": "#ffffff", //tabBar 背景色
-	    "list": [{
-	        "pagePath": "pages/home/home", //页面路径 
-	        "iconPath": "static/tabBar/icon_home.png", //未选中图片
-	        "selectedIconPath": "static/tabBar/icon_home_active.png", //选中图片
-	        "text": "书架" //文字标题
-	    }, {
-	        "pagePath": "pages/bookkeeping/bookkeeping",
-	        "iconPath": "static/tabBar/icon_selected.png",
-	        "selectedIconPath": "static/tabBar/icon_selected_active.png",
-	        "text": "精选"
-	    }, {
-	        "pagePath": "pages/journal/journal",
-	        "iconPath": "static/tabBar/icon_stackRoom.png",
-	        "selectedIconPath": "static/tabBar/icon_stackRoom_active.png",
-	        "text": "书库"
-	    }, {
-	        "pagePath": "pages/my/my",
-	        "iconPath": "static/tabBar/icon_my.png",
-	        "selectedIconPath": "static/tabBar/icon_my_active.png",
-	        "text": "个人中心"
-	    }]
+		"color": "#707070", //文字默认颜色
+		"selectedColor": "#3286fd", //选择文字颜色
+		"borderStyle": "black", //tabBar 边框颜色 可选black/white
+		"backgroundColor": "#ffffff", //tabBar 背景色
+		"list": [{
+			"pagePath": "pages/home/home", //页面路径 
+			"iconPath": "static/tabBar/icon_home.png", //未选中图片
+			"selectedIconPath": "static/tabBar/icon_home_active.png", //选中图片
+			"text": "书架" //文字标题
+		}, {
+			"pagePath": "pages/bookkeeping/bookkeeping",
+			"iconPath": "static/tabBar/icon_selected.png",
+			"selectedIconPath": "static/tabBar/icon_selected_active.png",
+			"text": "精选"
+		}, {
+			"pagePath": "pages/journal/journal",
+			"iconPath": "static/tabBar/icon_stackRoom.png",
+			"selectedIconPath": "static/tabBar/icon_stackRoom_active.png",
+			"text": "书库"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath": "static/tabBar/icon_my.png",
+			"selectedIconPath": "static/tabBar/icon_my_active.png",
+			"text": "个人中心"
+		}]
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
