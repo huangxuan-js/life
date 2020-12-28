@@ -1,12 +1,15 @@
 {
   "pages": [
+    "pages/details/novelDetails",
     "pages/home/home",
     "pages/my/my",
     "pages/setting/setting",
     "pages/login/login",
     "pages/journal/journal",
     "pages/bookkeeping/bookkeeping",
-    "pages/my/modifyData/modifyData"
+    "pages/my/modifyData/modifyData",
+    "pages/read/read",
+    "pages/read/catalog/catalog"
   ],
   "subPackages": [],
   "window": {
@@ -47,5 +50,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap12.json"
 }

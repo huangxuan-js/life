@@ -36,6 +36,22 @@
 .u-fixed {
   position: fixed;
 }
+/* 文字主要颜色 */
+.qsy-page .u-main-color {
+  color: #303133;
+}
+/* 文字次要颜色 */
+.qsy-page .u-tips-color {
+  color: #909399;
+}
+/* 文字审核 */
+.qsy-page .u-examine-color {
+  color: #ff9900;
+}
+/* 文字警告颜色 */
+.qsy-page .u-error-color {
+  color: #fa3534;
+}
 image {
   display: inline-block;
 }

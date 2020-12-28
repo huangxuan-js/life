@@ -83,4 +83,14 @@
   width: 100%;
   background-color: #ffffff;
 }
+.book-select-shadow.data-v-92bb8f34 {
+  -webkit-box-shadow: 0 -2px 4px -1px rgba(154, 141, 141, 0.6);
+          box-shadow: 0 -2px 4px -1px rgba(154, 141, 141, 0.6);
+}
+.red.data-v-92bb8f34 {
+  color: #fa3534;
+}
+.unchecked.data-v-92bb8f34 {
+  color: #d6d6d6;
+}
 

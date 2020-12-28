@@ -11,6 +11,23 @@
 	position: fixed;
 }
 
+/* 文字主要颜色 */
+.qsy-page .u-main-color{
+    color:#303133;
+}
+/* 文字次要颜色 */
+.qsy-page .u-tips-color{
+    color: #909399;
+}
+/* 文字审核 */
+.qsy-page .u-examine-color{
+    color: rgb(255, 153, 0);
+}
+/* 文字警告颜色 */
+.qsy-page .u-error-color{
+    color: #fa3534;
+}
+
 
 // nvue不能用标签命名样式，不能放在微信组件中，否则微信开发工具会报警告，无法使用标签名当做选择器
 /* #ifndef APP-NVUE */
