@@ -6,7 +6,9 @@
 					<!-- 这里是状态栏 -->
 				</view>
 				<view class="u-flex u-row-right u-p-t-30 u-p-r-30">
-					<u-icon name="search" color="#000000" size="50" class="u-m-r-40"></u-icon>
+					<navigator url="/pages/search/search">
+						<u-icon name="search" color="#000000" size="50" class="u-m-r-40"></u-icon>
+					</navigator>
 					<u-icon name="more-dot-fill" color="#000000" size="50" style="transform: rotate(90deg);"></u-icon>
 				</view>
 				<!-- #ifdef APP-PLUS -->

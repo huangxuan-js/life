@@ -3,6 +3,19 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	{
+		"path": "pages/home/home",
+		"style": {
+			"navigationBarTitleText": "",
+			"app-plus": {
+				"titleNView": false
+			}
+		}
+	},
+		{
+			"path": "pages/search/search",
+			"style": {}
+		},
 		{
 			"path": "pages/details/novel/catalog",
 			"style": {
@@ -17,15 +30,7 @@
 				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
 			}
 		},
-		{
-			"path": "pages/home/home",
-			"style": {
-				"navigationBarTitleText": "",
-				"app-plus": {
-					"titleNView": false
-				}
-			}
-		},
+		
 		{
 			"path": "pages/my/my",
 			"style": {}
@@ -69,6 +74,7 @@
 			"path": "pages/details/novel/read",
 			"style": {}
 		}
+
 
 	],
 	"tabBar": {
